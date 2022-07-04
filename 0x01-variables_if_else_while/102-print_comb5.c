@@ -1,33 +1,29 @@
 #include <stdio.h>
 
 /**
- * main - init
- * Return: 0
- */
-
+ *  *main -> assign a random number to the variable n each time it is executed
+ *   *and print the last digit of the number stored in the variable n
+ *    *Return: Always 0 (Success)
+ *     */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int d;
+	int i, j;
 
-	for (a = 0; a <= 9; a++)
+	for (i = 0; i < 100; i++)
 	{
-		for (b = a; b <= 9; b++)
+		for (j = 0; j < 100; j++)
 		{
-			for (c = b; c <= 9; c++)
+			if (i < j)
 			{
-				for (d = c + 1; d <= 9; d++)
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					if (a == 9 && b == 8 && c == 9 && d == 9)
-					{
-						printf("%d%d %d%d", a, b, c, d);
-					}
-					else
-					{
-						printf("%d%d %d%d, ", a, b, c, d);
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
@@ -35,4 +31,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
