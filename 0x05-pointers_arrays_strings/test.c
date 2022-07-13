@@ -1,10 +1,12 @@
+#include "main.h"
+
 #include <stdio.h>
 
 
 
 /**
  *
- *  * main - check the code 
+ *  * main - check the code
  *
  *   *
  *
@@ -12,11 +14,25 @@
  *
  *     */
 
-void reset_to_98(int n)
+int _strlen(char *s)
 
 {
 
-		n = 98;
+		int length = 0;
+
+
+
+			while (*s != '0')
+
+					{
+
+							s++;	
+
+										length++;
+
+											}
+
+				return (length);
 
 }
 
@@ -24,18 +40,22 @@ int main(void)
 
 {
 
-	    int n;
+	    char *str;
+
+	        int len;
 
 
 
-	        n = 402;
+		    str = "My first strlen!";
 
-		    printf("n=%d\n", n);
+		        len = _strlen(str);
 
-		        reset_to_98(n);
+			    printf("%d\n", len);
 
-			    printf("n=%d\n", n);
-
+			    printf('\0');
+			    printf("\0");
+			    printf('');
+			    printf("");
 			        return (0);
 
 }
