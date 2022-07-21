@@ -43,4 +43,3 @@ int is_palindrome(char *s)
 	}
 	return (compare_chars(s, 0, len - 1));
 }
-
