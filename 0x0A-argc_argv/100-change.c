@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int value, num_of_coins;
- 
+
 	if (argc != 2)
 	{
 		printf("%s\n", "Error");
@@ -33,7 +33,6 @@ int main(int argc, char *argv[])
 		}
 		while (value >= 5)
 		{
-
 			value -= 5;
 			num_of_coins++;
 		}
@@ -46,7 +45,7 @@ int main(int argc, char *argv[])
 		{
 			value--;
 			num_of_coins++;
-		}			
+		}
 		printf("%d\n", num_of_coins);
 	}
 	return (0);
