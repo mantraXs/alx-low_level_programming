@@ -6,7 +6,7 @@
  * @name: name of the dog
  * @age: age of the dog
  * @owner: name of the owner
-
+ *
  * Description: defines metadata about the dog
  */
 
