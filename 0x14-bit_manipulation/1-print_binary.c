@@ -1,28 +1,44 @@
 #include "main.h"
 
 /**
- * print_binary - prints an int in binary
- * @n: number to print
+ * print_binary - function that prints the binary of n
+ * @n: number to be printed
+ *
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	if (!n)
+	signed long int size;
+	char num_in_binary;
+	int print_zeros = 0;
+
+	size = sizeof(n) * 8 - 1;
+
+	if (n == 0)
 	{
-		_putchar('0');
+		putchar('0');
 		return;
 	}
-	print_b_helper(n, 1);
-}
-
-/**
- * print_b_helper - prints an int in binary
- * @n: number to print
- * @i: number to compare (in powers of 2)
- */
-void print_b_helper(unsigned long int n, unsigned long int i)
-{
-	if (i > n)
+	else if (n == 1)
+	{
+		putchar('1');
 		return;
-	print_b_helper(n, i << 1);
-	_putchar(n & i ? '1' : '0');
+	}
+	while (size >= 0)
+	{
+		num_in_binary = (n >> size) & 1;
+		if (print_zeros == 1)
+		{
+			putchar(num_in_binary + '0');
+		}
+		else
+		{
+			if (num_in_binary == 1)
+			{
+				putchar(num_in_binary + '0');
+				print_zeros = 1;
+			}
+		}
+		size -= 1;
+	}
 }
